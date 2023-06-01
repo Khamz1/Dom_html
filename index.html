@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        document.body.style.display = 'flex'
+
+        const block_1 = document.createElement('div');
+        const block_2 = document.createElement('div');
+
+        const refs_1 = document.createElement('a')
+        const refs_2 = document.createElement('a')
+        const refs_3 = document.createElement('a')
+
+
+        const list = document.createElement('ul');
+
+        const item_1 = document.createElement('li')
+
+        item_1.append(refs_1)
+        refs_1.textContent = 'Intocode'
+        refs_1.href = '#'
+        const item_2 = document.createElement('li');
+        item_2.append(refs_2)
+        refs_2.textContent = 'Google'
+        refs_2.href = '#'
+        const item_3 = document.createElement('li');
+        item_3.append(refs_3)
+        refs_3.textContent = 'Instagram'
+        refs_3.href = '#'
+
+        list.append(item_1, item_2, item_3)
+        list.style.listStyleType = 'none'
+        list.style.display = 'flex'
+        item_2.style.marginRight = '90px'
+        item_2.style.marginLeft = '90px'
+        item_3.style.marginRight = '50px'
+
+
+
+
+
+        block_1.style.width = '100%';
+        block_1.style.height = '200px';
+        block_1.style.border = '5px';
+
+        block_1.style.display = 'flex';
+        block_1.style.alignItems = 'center';
+        block_1.prepend(list)
+           block_1.style.flexDirection = 'column-reverse'
+        document.body.prepend(block_1);
+
+
+        block_2.textContent = ' Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur quia dolores perspiciatis accusamus nulla quae placeat'
+        block_2.style.width = '350px'
+        block_2.style.border = '5px'
+        block_2.style.backgroundColor = '';
+        block_2.style.border = 'solid 1px red' ;
+        block_2.style.borderRadius = '10px'
+        block_2.style.padding = '10px'
+        
+        // block_2.style.margin = 'auto'
+        block_1.append(block_2)
+    </script>
+</body>
+
+</html>
